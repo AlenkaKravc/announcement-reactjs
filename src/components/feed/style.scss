@@ -1,0 +1,203 @@
+@import '../../assets/colors';
+@import '../../assets/sizes';
+
+.fullPageBack {
+  position: absolute;
+  top: $header_height + 1.3em;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  padding: 0 1em;
+  box-sizing: border-box;
+  min-height: calc(100% - 4.5em);
+}
+
+.fullPageContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  margin-bottom: $footer_height;
+}
+
+.fullPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  box-sizing: border-box;
+
+  width: 100%;
+  max-width: 1000px;
+  transition: 0.5s ease-in-out;
+}
+
+.adComponent {
+  font-family: "Open Sans", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+
+  box-shadow: $shadow;
+  background-color: white;
+  margin-bottom: 1em;
+  border-radius: 3px;
+  width: 100%;
+
+  padding: 0.5em 1em;
+}
+
+.title {
+  font-size: 2em;
+  margin: 0.5em;
+}
+
+.description {
+  font-size: 0.9em;
+}
+
+.phone {
+  font-size: 1em;
+  margin: 0.4em;
+}
+
+.ads {
+  width: 100%
+}
+
+.removeButton {
+
+  border-radius: 3px;
+  font-size: 1em;
+  line-height: 1em;
+
+  color: white;
+  background-color: $color_red;
+  font-weight: lighter;
+  transition-duration: 0.3s;
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 5em;
+  height: 2em;
+
+  margin: 0.2em 0.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  &:hover {
+    background-color: red;
+  }
+}
+
+.newAd {
+  @extend .adComponent;
+
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  height: 3em;
+  font-size: 1.2em;
+  background: $color_green;
+  color: white;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: green;
+  }
+}
+
+.newAdForm {
+  @extend .adComponent;
+
+}
+
+.navigatePanel {
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: flex-end;
+  align-items: flex-end;
+}
+
+.addButton {
+  @extend .removeButton;
+
+  background: $color_green;
+  color: white;
+
+  &:hover {
+    background-color: green;
+  }
+}
+
+
+.mainForm {
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+
+
+
+.mainFormFieldTitle {
+  width: 100%;
+  font-size: 1em;
+  text-align: start;
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+
+.mainFormInputField {
+  font-size: 1em;
+  width: 80%;
+  height: 2em;
+  text-align: start;
+  background: none;
+  border: 1px solid purple;
+  position: relative;
+  padding: 0.3em;
+}
+
+.mainFormDescriptionField {
+  @extend .mainFormInputField;
+
+  font-family: "Open Sans", sans-serif;
+  min-height: 4em;
+  max-height: 4em;
+  resize: none;
+  overflow: auto;
+}
+
+.mainFormInputField:focus {
+  outline: none;
+}
+
+.error {
+  font-size: 1em;
+  color: red;
+}
