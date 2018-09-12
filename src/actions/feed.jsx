@@ -7,7 +7,7 @@ export const removeAd = ad_id =>
         ad_id: ad_id,
     });
 
-export const addNewAd = (title,description,phone) => (
+export const addNewAd = (title, description, phone) => (
     {
         type: C.ADD_NEW_AD,
         title: title,
