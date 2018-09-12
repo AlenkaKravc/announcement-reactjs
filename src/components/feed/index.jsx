@@ -63,22 +63,22 @@ class FeedUI extends Component {
 
         if (this.state.isValidPhone && this.state.isValidTitle){
             this.props.addNewAd(this.state.title,this.state.description,this.state.phone);
-            this.setState({
-                isShowNewAsForm: false,
-                title: '',
-                description: '',
-                phone: '+79',
-                isValidTitle: false,
-                isValidPhone: false,
-                check: false,
-            });
+            this.cancelAdding();
         }
 
 
     }
 
     cancelAdding() {
-        this.setState({isShowNewAsForm: false});
+        this.setState({
+            isShowNewAsForm: false,
+            title: '',
+            description: '',
+            phone: '+79',
+            isValidTitle: false,
+            isValidPhone: false,
+            check: false,
+        });
     }
 
     changeTitle(e) {
